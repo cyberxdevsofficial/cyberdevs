@@ -1,19 +1,144 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:linear-gradient(-45deg,#ff00c8,#00f2ff,#00ff85,#ff9e00);background-size:400% 400%;animation:gradientMove 10s infinite ease-in-out;color:#fff;min-height:100vh;display:flex;flex-direction:column}
-@keyframes gradientMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-header{display:flex;justify-content:space-between;align-items:center;padding:15px 25px;background:rgba(0,0,0,0.4);backdrop-filter:blur(8px);position:sticky;top:0;z-index:10}
-h1{font-size:1.5rem;color:#fff}
-#menu-btn{font-size:1.8rem;background:transparent;border:none;color:#fff;cursor:pointer}
-nav{display:none;flex-direction:column;background:rgba(0,0,0,0.7);position:absolute;top:60px;right:20px;border-radius:10px;padding:10px}
-nav.show{display:flex}
-nav a{color:#fff;padding:10px;text-decoration:none;font-weight:500;transition:0.3s}
-nav a:hover{background:rgba(255,255,255,0.2);border-radius:5px}
-.content{flex:1;padding:40px 20px;text-align:center}
-.content ul{list-style:none;padding:0}
-.content ul li{margin:10px 0;font-size:1.1rem}
-footer{background:rgba(0,0,0,0.6);text-align:center;padding:15px;font-size:0.9rem}
-.contact-form form{display:flex;flex-direction:column;max-width:400px;margin:20px auto;background:rgba(0,0,0,0.4);padding:20px;border-radius:15px}
-.contact-form input,.contact-form textarea{padding:10px;margin:10px 0;border:none;border-radius:8px;outline:none;resize:none}
-.contact-form button{padding:10px;background:#00ffae;border:none;border-radius:8px;color:#000;font-weight:600;cursor:pointer;transition:0.3s}
-.contact-form button:hover{background:#fff;color:#000}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+
+  /* Multicolor animated gradient */
+  background: linear-gradient(-45deg, #ff00c8, #00f2ff, #00ff85, #ff9e00);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-radius: 0 0 15px 15px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+#menu-btn {
+  font-size: 1.8rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+nav.show {
+  display: flex;
+}
+
+nav a {
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+  border-radius: 5px;
+}
+
+.content {
+  flex: 1;
+  padding: 40px 20px;
+  text-align: center;
+  background: rgba(0,0,0,0.3);
+  margin: 20px;
+  border-radius: 15px;
+}
+
+.content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content ul li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+footer {
+  background: rgba(0,0,0,0.6);
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  border-radius: 15px 15px 0 0;
+}
+
+/* Contact Form */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 20px auto;
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 10px;
+  background: #00ffae;
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #fff;
+  color: #000;
+}
